@@ -1,0 +1,38 @@
+.profile_image{
+	border: solid #000000 2px;
+	border-radius: 20px;
+}
+
+.btn-size{
+	width: 100%;
+}
+.copyright{
+	color: #2234FF;
+}
+.copyright:hover{
+	color: white;
+	text-decoration: none;
+}
+.footer-links{
+	text-align: center;
+	padding: 20px;
+}
+.footer-links div a{
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+.footer-links div a:hover{
+	color: #007bff;
+	text-decoration: none;
+}
+
+.header-name{
+	color: #FFFFFF;
+	font-size: 30px;
+}
+
+.blur{
+	   filter: drop-shadow(10px 10px 10px black);
+	   padding: 20px;
+}
