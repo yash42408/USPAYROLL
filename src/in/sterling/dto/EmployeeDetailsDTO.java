@@ -37,7 +37,6 @@ public class EmployeeDetailsDTO {
 		this.emp_add = emp_add;
 	}
 	
-	       
-
+	 
 }
  
