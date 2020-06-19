@@ -43,29 +43,29 @@ EmpIdGenerate eig=new EmpIdGenerate();
 		</div>
 		<div class="col-lg-10 col-md-10 col-sm-12 bg-light">
 					<h2>Add Employee</h2>
-				      <form action="">
+				      <form action="EmployeeAdd" method="post">
 						<table class="table">
 							<tr>
 								<td>ID</td>
-								<td><input type="text" class="form-control-sm" value=<%=eig.empIdGen()%> disabled></td>
+								<td><input type="text" class="form-control-sm" name="emp_id" value=<%=eig.empIdGen()%>></td>
 								
 							</tr>
 							
 							<tr>
 								<td>Mobile Number</td>
-								<td><input type="text" class="form-control-sm" value="emp_mobile"></td>
+								<td><input type="text" class="form-control-sm" name="emp_mobile"></td>
 							</tr>
 							<tr>
 								<td>Email Address</td>
-								<td><input type="email" class="form-control-sm" value="emp_email"></td>
+								<td><input type="email" class="form-control-sm" name="emp_email"></td>
 							</tr>
 							<tr>
 								<td>Designation</td>
-								<td><input type="email" class="form-control-sm" value="emp_designation"></td>
+								<td><input type="text" class="form-control-sm" name="emp_designation"></td>
 							</tr>
 							<tr>
 								<td>Salary</td>
-								<td><input type="email" class="form-control-sm" value="emp_salary"></td>
+								<td><input type="text" class="form-control-sm" name="emp_salary"></td>
 							</tr>				
 							<tr>
 							<td></td>

@@ -25,7 +25,7 @@ public class EmployerDashboard {
     		emd.setEmpr_mobile(rs.getString(2));
     		emd.setEmpr_email(rs.getString(3));
     		emd.setEmpr_name(rs.getString(5));
-
+            
     	}
 		return emd;
 		

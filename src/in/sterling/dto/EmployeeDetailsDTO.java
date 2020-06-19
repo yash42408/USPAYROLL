@@ -4,8 +4,25 @@ public class EmployeeDetailsDTO {
 	private String emp_name=null;
 	private String emp_id=null;
 	private String emp_email=null;
-	private int emp_mob=0;
+	private String emp_mob=null;
 	private String emp_add=null;
+	private String emp_designation=null;
+	private String emp_salary=null;
+	public String getEmp_designation(){
+		return emp_designation;
+	}
+	public void setEmp_designation(String emp_designation)
+	{
+		this.emp_designation=emp_designation;
+	}
+	public void setEmp_salary(String emp_salary)
+	{
+		this.emp_salary=emp_salary;
+	}
+	public String getEmp_salary()
+	{
+		return emp_salary;
+	}
 	public String getEmp_name() {
 		return emp_name;
 	}
@@ -24,10 +41,10 @@ public class EmployeeDetailsDTO {
 	public void setEmp_email(String emp_email) {
 		this.emp_email = emp_email;
 	}
-	public int getEmp_mob() {
+	public String getEmp_mob() {
 		return emp_mob;
 	}
-	public void setEmp_mob(int emp_mob) {
+	public void setEmp_mob(String emp_mob) {
 		this.emp_mob = emp_mob;
 	}
 	public String getEmp_add() {
