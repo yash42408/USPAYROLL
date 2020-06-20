@@ -47,25 +47,33 @@ EmpIdGenerate eig=new EmpIdGenerate();
 						<table class="table">
 							<tr>
 								<td>ID</td>
-								<td><input type="text" class="form-control-sm" name="emp_id" value=<%=eig.empIdGen()%>></td>
+								<td><input type="text" class="form-control-sm" name="emp_id" value=<%=eig.empIdGen()%> required></td>
 								
+							</tr>
+							<tr>
+								<td>First Name</td>
+								<td><input type="text" class="form-control-sm" name="emp_first_name" required></td>
+							</tr>
+							<tr>
+								<td>Last Name</td>
+								<td><input type="text" class="form-control-sm" name="emp_last_name" required></td>
 							</tr>
 							
 							<tr>
 								<td>Mobile Number</td>
-								<td><input type="text" class="form-control-sm" name="emp_mobile"></td>
+								<td><input type="text" class="form-control-sm" name="emp_mobile" required></td>
 							</tr>
 							<tr>
 								<td>Email Address</td>
-								<td><input type="email" class="form-control-sm" name="emp_email"></td>
+								<td><input type="email" class="form-control-sm" name="emp_email" required></td>
 							</tr>
 							<tr>
 								<td>Designation</td>
-								<td><input type="text" class="form-control-sm" name="emp_designation"></td>
+								<td><input type="text" class="form-control-sm" name="emp_designation" required></td>
 							</tr>
 							<tr>
 								<td>Salary</td>
-								<td><input type="text" class="form-control-sm" name="emp_salary"></td>
+								<td><input type="text" class="form-control-sm" name="emp_salary" required></td>
 							</tr>				
 							<tr>
 							<td></td>

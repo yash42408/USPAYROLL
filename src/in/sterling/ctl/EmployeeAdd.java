@@ -21,11 +21,15 @@ public class EmployeeAdd extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String emp_id=request.getParameter("emp_id");
+		String emp_first_name=request.getParameter("emp_first_name");
+		String emp_last_name=request.getParameter("emp_last_name");
 		String emp_mobile=request.getParameter("emp_mobile");
 		String emp_email=request.getParameter("emp_email");
 		String emp_designation=request.getParameter("emp_designation");
 		String emp_salary=request.getParameter("emp_salary");
         ed.setEmp_id(emp_id);
+        ed.setEmp_first_name(emp_first_name);
+        ed.setEmp_last_name(emp_last_name);
         ed.setEmp_mob(emp_mobile);
         ed.setEmp_email(emp_email);
         ed.setEmp_designation(emp_designation);

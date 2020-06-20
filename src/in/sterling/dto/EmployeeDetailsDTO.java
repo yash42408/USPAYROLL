@@ -1,13 +1,28 @@
 package in.sterling.dto;
 
 public class EmployeeDetailsDTO {
-	private String emp_name=null;
+	private String emp_first_name=null;
+	private String emp_last_name=null;
 	private String emp_id=null;
 	private String emp_email=null;
 	private String emp_mob=null;
 	private String emp_add=null;
 	private String emp_designation=null;
 	private String emp_salary=null;
+	
+	
+	public String getEmp_first_name() {
+		return emp_first_name;
+	}
+	public void setEmp_first_name(String emp_first_name) {
+		this.emp_first_name = emp_first_name;
+	}
+	public String getEmp_last_name() {
+		return emp_last_name;
+	}
+	public void setEmp_last_name(String emp_last_name) {
+		this.emp_last_name = emp_last_name;
+	}
 	public String getEmp_designation(){
 		return emp_designation;
 	}
@@ -22,12 +37,6 @@ public class EmployeeDetailsDTO {
 	public String getEmp_salary()
 	{
 		return emp_salary;
-	}
-	public String getEmp_name() {
-		return emp_name;
-	}
-	public void setEmp_name(String emp_name) {
-		this.emp_name = emp_name;
 	}
 	public String getEmp_id() {
 		return emp_id;

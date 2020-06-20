@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page import="in.sterling.dto.EmployeeDetailsDTO" %>
+ <%@page import="in.sterling.dto.EmployeeDetailsDTO" %>
 <%@page import="in.sterling.model.EmployeeDashboard" %>	
-
+<%@page import="java.util.*" %>
 <%!
-EmployeeDetailsDTO edd=new EmployeeDetailsDTO();
+EmployeeDashboard ed=new EmployeeDashboard();
+List<EmployeeDetailsDTO> mylist;
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -43,7 +44,7 @@ EmployeeDetailsDTO edd=new EmployeeDetailsDTO();
 </div>
 </div>
 <div class="col-lg-10 col-md-10 col-sm-12 bg-light">
-<h2>Employee Details</h2>
+<h2>All Employee Details</h2>
 <table class="table">
 <thead class="col-lg-10 bg-primary">
     <tr>
@@ -53,38 +54,12 @@ EmployeeDetailsDTO edd=new EmployeeDetailsDTO();
     <th scope="col">Salary</th>
     <th scope="col">Designation</th> 
     </tr>
- </thead>
- <div class="container-fluid">
-    <br/>
- <div class="row justify-content-center">
-  <div class="col-12 col-md-10 col-lg-8">
-    <form class="card card-sm" action="searchEmpView.jsp" method="post">
-       <div class="card-body row no-gutters align-items-center">
-             <div class="col-auto">
-                <i class="fas fa-search h4 text-body"></i>
-             </div>
-            <div class="col">
-             <input class="form-control form-control form-control-borderless" type="search" placeholder="Search Employee by Id or Name" name="emp_id">
-            </div>                                    
-           <div class="col-auto">
-            <button class="btn btn-primary" type="submit">Search</button>
-            <button type="button" onClick="window.location.href='viewAllEmpDetailsView.jsp';" class="btn btn-primary">View All Employee</button>                                        
-          </div>                             
-        </div>
-    </form>
-    <% 
-            String emp_id=null;
-            emp_id=request.getParameter("emp_id");
-          if(emp_id!=null)  
-          {    
-              
-               EmployeeDashboard ed=new EmployeeDashboard();
-               edd=ed.searchByEmpid(emp_id);
-               if(edd==null)
-                  out.println("<font color=red size=7>Record Not Found 404......</font>");
-               else
-              {   
-            %>
+</thead>
+<% 
+          mylist=ed.viewAllEmployee();
+          for(EmployeeDetailsDTO edd : mylist)
+          {  
+%>
     <!--condition check then execute part of table view-->
    <div class="container-fluid">
    
@@ -101,6 +76,9 @@ EmployeeDetailsDTO edd=new EmployeeDetailsDTO();
     </div>                                     
   </div>
  </div>				
+  <% 
+    }            
+  %>
 </table>
 </div>			
 </div>		
@@ -111,9 +89,5 @@ EmployeeDetailsDTO edd=new EmployeeDetailsDTO();
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- <% 
-               }
-         }      
- %>
 </body>
 </html>
